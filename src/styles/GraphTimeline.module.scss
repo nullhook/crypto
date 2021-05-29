@@ -1,0 +1,29 @@
+@import '_mixins';
+
+.container {
+  display: inline-block;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: 1px solid #E9E9F4;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.item {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $nav-prm-color;
+  padding: 0 0.8rem;
+  cursor: pointer;
+}
+
+.itemActive {
+  border-radius: 5px;
+  color: white;
+  background-color: $nav-prm-color;
+}

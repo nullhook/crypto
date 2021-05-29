@@ -1,0 +1,23 @@
+@import '_mixins';
+
+.container {
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance {
+  span {
+    color: #868E96;
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  data {
+    font-weight: 600;
+    font-size: 3.6rem;
+  }
+}

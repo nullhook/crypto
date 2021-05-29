@@ -1,0 +1,81 @@
+@import '_mixins';
+
+.container {
+  position: relative;
+}
+
+.nav {
+  border-bottom: 2px solid #DADCE8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $nav-prm-color;
+
+  a {
+    display: flex;
+    padding: 0.5rem 3rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px; /* offset to overlap */
+    left: 0;
+    background: $prm-gradient;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.navItemActive {
+  background: $prm-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:after {
+    opacity: 1;
+  }
+}
+
+.moreIco {
+  background-color: transparent;
+  border: 0;
+}
+
+.hideLabel {
+  &:not(:focus),
+  &:not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(100%); 
+    height: 1px; 
+    overflow: hidden; 
+    position: absolute; 
+    white-space: nowrap; 
+    width: 1px; 
+  }
+}

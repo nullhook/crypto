@@ -1,0 +1,108 @@
+@import '_mixins';
+
+.container {
+  display: block;
+}
+
+.form {
+  width: 100%;
+
+  label,
+  button {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(100%); 
+    height: 1px; 
+    overflow: hidden; 
+    position: absolute; 
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    min-width: 250px;
+    height: 3.6rem;
+    border: 1px solid #AEB1C2;
+    border-radius: 12px;
+    padding-left: 3.6rem;
+    font-size: 1.3rem;
+  }
+}
+
+.header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.searchIco {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  pointer-events: none;
+
+  svg {
+    width: 14px;
+    height: 16px;
+  }
+}
+
+.walletList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.walletItem {
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+}
+
+.walletName {
+  display: flex;
+  align-items: center;
+}
+
+.thumb {
+  width: 40px;
+  height: 40px;
+  background-color: #AEB1C2;
+  border-radius: 40px;
+  margin-right: 1.5rem;
+}
+
+.dataList {
+  text-align: right;
+
+  data {
+    display: block;
+  }
+}
+
+.cryptoCount {
+  color: #868E96;
+  font-size: 1.2rem;
+}
+
+.addBtn {
+  display: flex;
+  font-weight: 600;
+  color: #212529;
+  background-color: transparent;
+  border: 1px solid #AEB1C2;
+  border-radius: 48px;
+  padding: 1.1rem 2rem;
+
+  i {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.5rem;
+  }
+}

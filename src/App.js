@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Sidenav from 'components/Sidenav';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Crypto from 'pages/Crypto';
+import Cards from 'pages/Cards';
+import Rewards from 'pages/Rewards';
+
+/*
+* TODO: Private routes
+* TODO: Port to route config rather than manual import process
+* TODO: Handle routes that does not match path i.e 404
+*/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App-sidebox">
+        <Sidenav />
+      </div>
+      <Switch>
+        <Route path="/cards">
+          <Cards />
+        </Route>
+        <Route path="/rewards">
+          <Rewards />
+        </Route>
+        <Route path="/crypto">
+          <Crypto />
+        </Route>
+        <Route path="/">
+          <Redirect to="/crypto" />
+        </Route>
+      </Switch>
+    </Router>
     </div>
   );
 }
