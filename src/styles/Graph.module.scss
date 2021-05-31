@@ -2,11 +2,20 @@
 
 .container {
   display: block;
+  margin-bottom: 2rem;
+
+  @media #{$mobile-only} {
+    padding: 0 2rem;
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+
+  @media #{$mobile-only} {
+    flex-direction: column-reverse;
+  }
 }
 
 .balance {

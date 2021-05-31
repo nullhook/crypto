@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'styles/Dropdown.module.scss';
+import styles from 'styles/UserActions.module.scss';
 import { ReactComponent as LockSVG } from 'svgs/lock.svg';
 import { ReactComponent as SettingsSVG } from 'svgs/settings.svg';
 
@@ -8,7 +8,7 @@ const items = [
   {label: 'Settings', href: '', icon: SettingsSVG },
 ];
 
-function Dropdown({ setIsMenuOpen }) {
+function UserActions({ setIsMenuOpen }) {
   const ref = React.useRef();
 
   React.useEffect(() => {
@@ -42,4 +42,4 @@ function Dropdown({ setIsMenuOpen }) {
   );
 }
 
-export default Dropdown;
+export default UserActions;

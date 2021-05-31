@@ -21,7 +21,7 @@ function Sidenav() {
         <ul className={styles.list}>
           {items.map((entry,i) => {
             return (
-              <List 
+              <Item 
                 key={i} 
                 data={entry}
               />
@@ -33,7 +33,7 @@ function Sidenav() {
   );
 }
 
-function List({ data }) {
+function Item({ data }) {
   const match = useRouteMatch(data.href);
 
   const itemClass = cx({

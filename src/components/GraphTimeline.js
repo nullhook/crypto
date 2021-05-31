@@ -11,8 +11,18 @@ const items = [
   {label: 'ALL', desc: 'All', },
 ]
 
-function GraphTimeline() {
+function GraphTimeline({ setData, data }) {
   const [currItem, setCurrItem] = React.useState(0);
+
+  const handleClick = (e, i) => {
+    const newData = data.map(entry => ({
+      date: entry.date,
+      value: (Math.random() * 80),
+    }));
+    
+    setData(newData);
+    setCurrItem(i);
+  }
 
   return (
     <div className={styles.container}>
@@ -28,7 +38,7 @@ function GraphTimeline() {
               tabIndex={0}
               key={i}
               className={itemClass}
-              onClick={() => setCurrItem(i)}
+              onClick={(e) => handleClick(e, i)}
               role="button"
               aria-label={entry.desc}
             >

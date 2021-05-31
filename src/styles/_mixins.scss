@@ -1,3 +1,44 @@
+// Media Queries
+$mq-desktop-xl: 1680px;
+$mq-desktop: 1382px;
+$mq-desktop-small: 1280px;
+$mq-tablet-landscape: 1024px;
+$mq-tablet-portrait: 768px;
+$mq-mobile-landscape: 520px;
+$mq-mobile-portrait: 375px;
+// Don't change these !!
+$mq-desktop-xl-up: ($mq-desktop-xl);
+$mq-desktop-up: ($mq-desktop + 1);
+$mq-tablet-landscape-up: ($mq-tablet-landscape + 1);
+$mq-tablet-portrait-up: ($mq-tablet-portrait + 1);
+// All XL screens
+$xl-desktop-and-up: "(min-width : #{$mq-desktop-xl-up})";
+// Everything larger than a regular desktop
+$desktop-and-up: "(min-width : #{$mq-desktop-up})";
+// Everything larger than a landscape tablet
+$tablet-landscape-and-up: "(min-width : #{$mq-tablet-landscape-up})";
+// Everything larger than a portrait tablet
+$tablet-portrait-and-up: "(min-width : #{$mq-tablet-portrait-up})";
+// Everything smaller than small desktop
+$small-desktop-and-below: "(max-width : #{$mq-desktop-small})";
+// Everything smaller than tablet landscape
+$tablet-landscape-and-below: "(max-width : #{$mq-tablet-landscape})";
+// Everything below and including the portrait width of the tablet
+$tablet-portrait-and-below: "(max-width : #{$mq-tablet-portrait})";
+// Retina
+$minDevicePixelRatio2: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+// Landscape tablet and short
+$landscape-short: "(max-width : #{$mq-tablet-landscape}) and (min-aspect-ratio: 16/11) and (orientation: landscape)";
+// Both mobile portrait and landscape
+$mobile-only: "(max-width : #{$mq-mobile-landscape})";
+// Just mobile landscape
+$mobile-landscape-and-below: "(max-width: #{$mq-mobile-landscape})";
+// Just mobile portrait
+$mobile-portrait-and-below: "(max-width: #{$mq-mobile-portrait})";
+$mobile-up: "(min-width : #{$mq-mobile-landscape})";
+// -----------------------------------------
+
+// colors
 $nav-prm-color: #495057;
 $prm-gradient: linear-gradient(122.53deg, #4C54D2 0%, #BF14A2 56.25%, #F73A1C 100%);
-$nav-gradient: linear-gradient(128.18deg, #A43CE4 13.94%, #A72B6D 84.49%);
+$nav-gradient: linear-gradient(128.18deg, #A43CE4 13.94%, #A72B6D 84.49%);;

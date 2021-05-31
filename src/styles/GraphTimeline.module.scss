@@ -2,6 +2,10 @@
 
 .container {
   display: inline-block;
+
+  @media #{$mobile-only} {
+    margin-bottom: 2rem;
+  }
 }
 
 .list {

@@ -27,7 +27,7 @@ function WalletList() {
   const [data, setData] = React.useState({ 
     payload: null, 
     loading: true, 
-  }); // TODO: Add error boolean
+  }); // TODO: Add error state
   const [query, setQuery] = React.useState();
 
   React.useEffect(() => {

@@ -4,10 +4,22 @@ import Graph from 'components/Graph';
 import cryptoData from 'data/crypto';
 
 function Portfolio() {
+  const [data, setData] = React.useState();
+
+  /* 
+  * TODO: Optimize unnecessary renders
+  * TODO: Graph loading placeholder 
+  */ 
+
+  React.useEffect(() => {
+    setData(cryptoData);
+  }, []);
+
   return (
     <div>
-      <Graph 
-        payload={cryptoData} 
+      <Graph
+        payload={data}
+        setData={setData}
         balance={12453.17}
       />
       <div className="App-portfolio-list">

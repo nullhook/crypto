@@ -2,7 +2,7 @@ import React from 'react';
 import styles from 'styles/CryptoTabs.module.scss';
 import { ReactComponent as MoreSVG } from 'svgs/more.svg';
 import cx from 'classnames';
-import Dropdown from './Dropdown';
+import UserActions from './UserActions';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
@@ -47,7 +47,7 @@ function CryptoTabs() {
           </button>
         </div>
       </nav>
-      {isMenuOpen && <Dropdown setIsMenuOpen={setIsMenuOpen} />}
+      {isMenuOpen && <UserActions setIsMenuOpen={setIsMenuOpen} />}
     </header>
   );
 }
