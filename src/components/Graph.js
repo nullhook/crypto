@@ -71,6 +71,7 @@ function Graph({ payload, balance, setData }) {
     const b = data[idx];
     const match = b && (date - a.date > b.date - date) ? b : a;
 
+
     // TODO: handle tooltips that are out of bounds within the viewBox
     tooltip
       .style('display', null)
@@ -79,8 +80,8 @@ function Graph({ payload, balance, setData }) {
 
     marker
       .style('display', null)
-      .attr('cx', mapX(data[idx]?.date))
-      .attr('cy', mapY(data[idx]?.value))
+      .attr('cx', mapX(match.date))
+      .attr('cy', mapY(match.value))
   }
 
   const handleMouseLeave = (e) => {
